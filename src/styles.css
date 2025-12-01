@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f7f7fb;
+  --foreground: #0f1021;
+  --card: #ffffff;
+  --card-foreground: #0f1021;
+  --muted: #ececf4;
+  --muted-foreground: #5c5f7b;
+  --border: #e0e1ee;
+  --input: #d6d7e7;
+  --ring: #3024ae33;
+  --primary: #3024ae;
+  --primary-foreground: #ffffff;
+  --secondary: #c86cd7;
+  --secondary-foreground: #ffffff;
+  --accent: #4dd1ff;
+  --accent-foreground: #0f1021;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #070711;
+  --foreground: #f5f5ff;
+  --card: #111125;
+  --card-foreground: #f5f5ff;
+  --muted: #1c1c35;
+  --muted-foreground: #a1a2c7;
+  --border: #2a2b45;
+  --input: #35365b;
+  --ring: #c86cd766;
+  --primary: #8577ff;
+  --primary-foreground: #070711;
+  --secondary: #c86cd7;
+  --secondary-foreground: #070711;
+  --accent: #4dd1ff;
+  --accent-foreground: #070711;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: 'Kanit', 'Prompt', 'Noto Sans Thai', 'Sarabun', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+}

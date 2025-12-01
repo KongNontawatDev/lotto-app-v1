@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "totalPoints": 1240,
+    "description": [
+      "แต้มสะสมใช้แลกของรางวัลได้ตามจำนวนที่กำหนด",
+      "แต้มหมดอายุทุกสิ้นปีปฏิทิน"
+    ]
+  },
+  "history": [
+    {
+      "id": "point-001",
+      "title": "ซื้อสลากกินแบ่งรัฐบาล งวด 1 ธ.ค. 2568",
+      "date": "20 พ.ย. 2568",
+      "points": 200
+    },
+    {
+      "id": "point-002",
+      "title": "เล่นเกมสะสมแต้ม Lucky Spin",
+      "date": "18 พ.ย. 2568",
+      "points": 40
+    },
+    {
+      "id": "point-003",
+      "title": "ซื้อสลากกินแบ่งรัฐบาล งวด 16 พ.ย. 2568",
+      "date": "05 พ.ย. 2568",
+      "points": 180
+    }
+  ],
+  "rewards": [
+    {
+      "id": "reward-inline-01",
+      "name": "แก้วน้ำลายพิเศษ",
+      "pointsRequired": 500,
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=60"
+    }
+  ]
+}
+

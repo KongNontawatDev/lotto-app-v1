@@ -1,0 +1,35 @@
+[
+  {
+    "id": "safe-001",
+    "number": "555777",
+    "drawDate": "2025-12-01",
+    "purchaseDate": "2025-11-20",
+    "status": "รอออกรางวัล",
+    "image": "/image/lotto_image.jpg"
+  },
+  {
+    "id": "safe-002",
+    "number": "202420",
+    "drawDate": "2025-11-16",
+    "purchaseDate": "2025-11-05",
+    "status": "ยังไม่ชำระเงิน",
+    "image": "/image/lotto_image.jpg"
+  },
+  {
+    "id": "safe-003",
+    "number": "101010",
+    "drawDate": "2025-10-01",
+    "purchaseDate": "2025-09-20",
+    "status": "ไม่ถูกรางวัล",
+    "image": "/image/lotto_image.jpg"
+  },
+  {
+    "id": "safe-004",
+    "number": "909999",
+    "drawDate": "2025-09-16",
+    "purchaseDate": "2025-09-01",
+    "status": "สำเร็จ",
+    "image": "/image/lotto_image.jpg"
+  }
+]
+

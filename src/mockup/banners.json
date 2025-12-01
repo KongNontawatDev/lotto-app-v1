@@ -1,0 +1,20 @@
+[
+  {
+    "id": "banner-01",
+    "title": "โปรโมชัน",
+    "subtitle": "จองเลขโปรดล่วงหน้า",
+    "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&h=400&q=80"
+  },
+  {
+    "id": "banner-02",
+    "title": "สมาชิกใหม่",
+    "subtitle": "สะสมแต้มเพิ่ม",
+    "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1200&h=400&q=80"
+  },
+  {
+    "id": "banner-03",
+    "title": "เชื่อมเป๋าตัง",
+    "subtitle": "จ่ายเร็ว ปลอดภัย",
+    "image": "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?auto=format&fit=crop&w=1200&h=400&q=80"
+  }
+]

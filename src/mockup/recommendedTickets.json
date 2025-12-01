@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rec-001",
+    "number": "168999",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 3,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขดังจากวัดชื่อดังภาคเหนือ"
+  },
+  {
+    "id": "rec-002",
+    "number": "459012",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 7,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขฝันเห็นน้ำตก"
+  },
+  {
+    "id": "rec-003",
+    "number": "777123",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 2,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดพิเศษ 5 ใบ สำหรับสายบุญ"
+  },
+  {
+    "id": "rec-004",
+    "number": "909090",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 5,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขหงส์คู่ เสริมโชคการเงิน"
+  },
+  {
+    "id": "rec-005",
+    "number": "123456",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเรียงสวย ยอดฮิต"
+  },
+  {
+    "id": "rec-006",
+    "number": "888888",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 1,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขมงคล 8 เต็มใบ"
+  },
+  {
+    "id": "rec-007",
+    "number": "246810",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 6,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขคู่เรียง"
+  },
+  {
+    "id": "rec-008",
+    "number": "135791",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 8,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขคี่เรียง"
+  },
+  {
+    "id": "rec-009",
+    "number": "500500",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 3,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดเลขกลม 500"
+  },
+  {
+    "id": "rec-010",
+    "number": "191919",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 2,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขซ้ำ 19 สามคู่"
+  },
+  {
+    "id": "rec-011",
+    "number": "654321",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 5,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเรียงกลับ"
+  },
+  {
+    "id": "rec-012",
+    "number": "111222",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดเลขคู่พิเศษ"
+  }
+]

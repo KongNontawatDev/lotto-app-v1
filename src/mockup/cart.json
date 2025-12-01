@@ -1,0 +1,15 @@
+[
+  {
+    "cartId": "cart-01",
+    "id": "lot-001",
+    "number": "123456",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "quantity": 1,
+    "reservedAt": 1732690200000
+  }
+]
+

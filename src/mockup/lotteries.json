@@ -1,0 +1,152 @@
+[
+  {
+    "id": "lot-001",
+    "number": "123456",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเดี่ยวยอดนิยมประจำงวดนี้"
+  },
+  {
+    "id": "lot-002",
+    "number": "908172",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 8,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเดี่ยวจากฝันดี"
+  },
+  {
+    "id": "lot-003",
+    "number": "660321",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 2,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุด 5 ใบลุ้นหลายรางวัล"
+  },
+  {
+    "id": "lot-004",
+    "number": "777199",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 6,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขมงคลจากจุดธูป"
+  },
+  {
+    "id": "lot-005",
+    "number": "019283",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 10,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเดี่ยวยอดนิยม"
+  },
+  {
+    "id": "lot-006",
+    "number": "551299",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 1,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขชุด 5 ใบ เหมาะสำหรับสายลุ้นหนัก"
+  },
+  {
+    "id": "lot-007",
+    "number": "330042",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 3,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขมงคลประจำวันพระ"
+  },
+  {
+    "id": "lot-008",
+    "number": "884422",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดสุดปังจากการขอพร"
+  },
+  {
+    "id": "lot-009",
+    "number": "505090",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 5,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขสองตัวบน-ล่างเด่น"
+  },
+  {
+    "id": "lot-010",
+    "number": "241680",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 7,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขจากเจ้าที่"
+  },
+  {
+    "id": "lot-011",
+    "number": "999888",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 3,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดเลขสวยมาก"
+  },
+  {
+    "id": "lot-012",
+    "number": "168168",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 9,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขรวยรวยรวย"
+  },
+  {
+    "id": "lot-013",
+    "number": "456789",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 5,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขเรียงสวย"
+  },
+  {
+    "id": "lot-014",
+    "number": "111222",
+    "drawDate": "2025-12-01",
+    "price": 400,
+    "type": "set",
+    "remaining": 2,
+    "image": "/image/lotto_image.jpg",
+    "description": "ชุดเลขคู่พิเศษ"
+  },
+  {
+    "id": "lot-015",
+    "number": "789012",
+    "drawDate": "2025-12-01",
+    "price": 80,
+    "type": "single",
+    "remaining": 4,
+    "image": "/image/lotto_image.jpg",
+    "description": "เลขดังจากสายมู"
+  }
+]

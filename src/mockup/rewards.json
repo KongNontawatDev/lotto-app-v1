@@ -1,0 +1,21 @@
+[
+  {
+    "id": "reward-001",
+    "name": "แก้วน้ำลิมิเต็ด",
+    "pointsRequired": 500,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    "id": "reward-002",
+    "name": "กระเป๋าผ้าเงินตุง",
+    "pointsRequired": 800,
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    "id": "reward-003",
+    "name": "หมวก Bucket",
+    "pointsRequired": 1000,
+    "image": "https://images.unsplash.com/photo-1504595403659-9088ce801e29?auto=format&fit=crop&w=800&q=60"
+  }
+]
+
