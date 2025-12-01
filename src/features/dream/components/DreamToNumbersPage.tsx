@@ -142,7 +142,8 @@ function predictNumbersFromDream(dreamText: string): { numbers: { twoDigits: str
       analysis += ' ความฝันที่ละเอียดเช่นนี้มักมีความหมายที่ลึกซึ้งและควรให้ความสำคัญ'
     }
     
-    analysis += ` มักตีเป็นเลขเด่น ${numbers.join(', ')} และเลขที่เกี่ยวข้อง ${twoDigits.slice(0, 2).join(', ')}`
+    const safeTwoDigits = Array.isArray(twoDigits) ? twoDigits : []
+    analysis += ` มักตีเป็นเลขเด่น ${numbers.join(', ')} และเลขที่เกี่ยวข้อง ${safeTwoDigits.slice(0, 2).join(', ')}`
     
     prediction = analysis
   } else {
@@ -158,7 +159,8 @@ function predictNumbersFromDream(dreamText: string): { numbers: { twoDigits: str
       analysis += 'ความฝันที่กระชับแต่มีความหมาย'
     }
     
-    analysis += ` เลขเด่นที่ควรพิจารณาคือ ${numbers.join(', ')} และเลขเสริม ${twoDigits.slice(0, 2).join(', ')}`
+    const safeTwoDigits = Array.isArray(twoDigits) ? twoDigits : []
+    analysis += ` เลขเด่นที่ควรพิจารณาคือ ${numbers.join(', ')} และเลขเสริม ${safeTwoDigits.slice(0, 2).join(', ')}`
     
     prediction = analysis
   }
@@ -323,7 +325,7 @@ function DreamResult({
           <div>
             <h3 className="text-primary font-semibold mb-3 text-sm">เลข 2 ตัว</h3>
             <div className="flex flex-wrap gap-3">
-              {result.numbers.twoDigits.map((num, idx) => (
+              {(Array.isArray(result.numbers?.twoDigits) ? result.numbers.twoDigits : []).map((num, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -340,7 +342,7 @@ function DreamResult({
           <div>
             <h3 className="text-primary font-semibold mb-3 text-sm">เลข 3 ตัว</h3>
             <div className="flex flex-wrap gap-3">
-              {result.numbers.threeDigits.map((num, idx) => (
+              {(Array.isArray(result.numbers?.threeDigits) ? result.numbers.threeDigits : []).map((num, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -453,7 +455,7 @@ function RecentDreams({ dreams }: { dreams: DreamData[] }) {
                     : dream.dreamText}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {dream.numbers.twoDigits.slice(0, 2).map((num, numIdx) => (
+                  {(Array.isArray(dream.numbers?.twoDigits) ? dream.numbers.twoDigits : []).slice(0, 2).map((num, numIdx) => (
                     <span
                       key={numIdx}
                       className="px-2 py-1 bg-primary/10 border border-primary/25 rounded text-primary font-semibold text-xs shadow-sm"
@@ -495,7 +497,10 @@ export function DreamToNumbersPage() {
     }
     
     setCurrentResult(newDream)
-    setRecentDreams((prev) => [newDream, ...prev].slice(0, 5))
+    setRecentDreams((prev) => {
+      const safePrev = Array.isArray(prev) ? prev : []
+      return [newDream, ...safePrev].slice(0, 5)
+    })
     
     setIsLoading(false)
   }

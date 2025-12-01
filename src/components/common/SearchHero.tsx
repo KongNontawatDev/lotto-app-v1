@@ -67,7 +67,8 @@ export const SearchHero = ({
   }
 
   const handleDigitChange = (index: number, value: string) => {
-    const sanitized = value.replace(/\D/g, '').slice(0, 1)
+    const safeValue = typeof value === 'string' ? value : ''
+    const sanitized = safeValue.replace(/\D/g, '').slice(0, 1)
     const newDigits = [...digits]
     newDigits[index] = sanitized
     setDigits(newDigits)

@@ -42,12 +42,14 @@ export const useLotteryFilterStore = create<LotteryFilterStore>((set, get) => ({
 
   setDigit: (index, value) => {
     const digits = [...get().digits]
-    digits[index] = value.replace(/\D/g, '').slice(0, 1)
+    const safeValue = typeof value === 'string' ? value : ''
+    digits[index] = safeValue.replace(/\D/g, '').slice(0, 1)
     set({ digits })
   },
 
   setDigits: (digits) => {
-    set({ digits: digits.slice(0, 6) })
+    const safeDigits = Array.isArray(digits) ? digits : []
+    set({ digits: safeDigits.slice(0, 6) })
   },
 
   triggerSearch: () => {

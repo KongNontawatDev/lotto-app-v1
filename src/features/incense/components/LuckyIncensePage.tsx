@@ -196,7 +196,10 @@ export function LuckyIncensePage() {
               second: '2-digit',
             }),
           }
-          setHistory((prev) => [newHistoryItem, ...prev].slice(0, 10))
+          setHistory((prev) => {
+            const safePrev = Array.isArray(prev) ? prev : []
+            return [newHistoryItem, ...safePrev].slice(0, 10)
+          })
         }
       }, 16) // ~60fps
 
@@ -330,7 +333,8 @@ export function LuckyIncensePage() {
                     const smokeImages = ['/image/smoke.png', '/image/smoke2.png', '/image/smoke3.png', '/image/smoke4.png']
                     
                     // แยกควันชุดแรก (ครึ่งแรก) ให้ไปอยู่หลัง unlit incense
-                    const firstHalfParticles = smokeParticles.slice(0, Math.floor(smokeParticles.length / 2))
+                    const safeSmokeParticles = Array.isArray(smokeParticles) ? smokeParticles : []
+                    const firstHalfParticles = safeSmokeParticles.slice(0, Math.floor(safeSmokeParticles.length / 2))
                     
                     return firstHalfParticles.length > 0 ? (
                       <div 
@@ -496,7 +500,8 @@ export function LuckyIncensePage() {
                     const smokeImages = ['/image/smoke.png', '/image/smoke2.png', '/image/smoke3.png', '/image/smoke4.png']
                     
                     // ควันชุดหลัง (ครึ่งหลัง) แยกเป็น behind และ front ตาม isFront property
-                    const secondHalfParticles = smokeParticles.slice(Math.floor(smokeParticles.length / 2))
+                    const safeSmokeParticles = Array.isArray(smokeParticles) ? smokeParticles : []
+                    const secondHalfParticles = safeSmokeParticles.slice(Math.floor(safeSmokeParticles.length / 2))
                     const behindParticles = secondHalfParticles.filter(p => !p.isFront)
                     
                     return behindParticles.length > 0 ? (
@@ -1135,7 +1140,8 @@ export function LuckyIncensePage() {
                     const smokeImages = ['/image/smoke.png', '/image/smoke2.png', '/image/smoke3.png', '/image/smoke4.png']
                     
                     // ควันชุดหลัง (ครึ่งหลัง) ที่อยู่ด้านหน้า (isFront = true)
-                    const secondHalfParticles = smokeParticles.slice(Math.floor(smokeParticles.length / 2))
+                    const safeSmokeParticles = Array.isArray(smokeParticles) ? smokeParticles : []
+                    const secondHalfParticles = safeSmokeParticles.slice(Math.floor(safeSmokeParticles.length / 2))
                     const frontParticles = secondHalfParticles.filter(p => p.isFront)
                     
                     return (

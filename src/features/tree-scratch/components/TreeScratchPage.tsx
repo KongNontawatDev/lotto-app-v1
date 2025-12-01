@@ -286,7 +286,7 @@ export function TreeScratchPage() {
       })
     }
 
-    if (particlesRef.current.length > 3000) {
+    if (Array.isArray(particlesRef.current) && particlesRef.current.length > 3000) {
       particlesRef.current = particlesRef.current.slice(-3000)
     }
 
@@ -497,14 +497,14 @@ export function TreeScratchPage() {
                         textShadow: '0 2px 8px rgba(48, 36, 174, 0.25), 0 0 12px rgba(200, 108, 215, 0.15)'
                       }}
                     >
-                      {finalNumbers.join('')}
+                      {(Array.isArray(finalNumbers) ? finalNumbers : []).join('')}
                     </motion.p>
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-4">
                   <h3 className="text-sm font-semibold text-primary mb-2">ความหมายของเลข:</h3>
-                  {finalNumbers.map((digit, index) => (
+                  {(Array.isArray(finalNumbers) ? finalNumbers : []).map((digit, index) => (
                     <div key={index} className="rounded-xl  bg-muted/50 p-3">
                       <p className="text-xs text-foreground">
                         <span className="font-bold text-primary">{digit}</span>: {NUMBER_MEANINGS[digit]}

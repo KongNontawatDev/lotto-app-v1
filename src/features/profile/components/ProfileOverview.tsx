@@ -28,11 +28,14 @@ export const ProfileOverview = ({
   }
 
   if (!profile) return null
+  const nameInitials = profile.name && typeof profile.name === 'string' 
+    ? profile.name.slice(0, 2) 
+    : '??'
   return (
     <section className="flex flex-col items-center gap-3 rounded-3xl border border-border/40 bg-card p-6 text-center shadow-sm">
       <Avatar className="h-20 w-20 border-2 border-primary">
-        <AvatarImage src={profile.avatar} alt={profile.name} />
-        <AvatarFallback>{profile.name.slice(0, 2)}</AvatarFallback>
+        <AvatarImage src={profile.avatar} alt={profile.name || ''} />
+        <AvatarFallback>{nameInitials}</AvatarFallback>
       </Avatar>
       <div>
         <h2 className="text-xl font-semibold">{profile.name}</h2>
