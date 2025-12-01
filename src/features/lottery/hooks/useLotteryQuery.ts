@@ -19,6 +19,7 @@ export const useLotteryQuery = () => {
       const { data } = await apiClient.get<LotteryTicket[]>(lotteriesUrl)
       return data
     },
+    initialData: [],
   })
 
   // Initialize stock state เมื่อโหลด lotteries สำเร็จ (เฉพาะเมื่อใช้ mock API)

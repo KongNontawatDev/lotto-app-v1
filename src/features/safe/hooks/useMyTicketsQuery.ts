@@ -15,5 +15,6 @@ export const useMyTicketsQuery = () =>
       const { data } = await apiClient.get<MyTicket[]>(myTicketsUrl)
       return data
     },
+    initialData: [],
   })
 

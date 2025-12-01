@@ -14,6 +14,7 @@ export const useCartQuery = () => {
       const { data } = await apiClient.get<CartItem[]>(cartUrl)
       return data
     },
+    initialData: [],
   })
 
   useEffect(() => {

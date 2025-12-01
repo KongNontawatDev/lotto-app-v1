@@ -15,5 +15,6 @@ export const useBannerQuery = () =>
       const { data } = await apiClient.get<BannerItem[]>(bannersUrl)
       return data
     },
+    initialData: [],
   })
 

@@ -8,9 +8,7 @@ const getInitialMode = (): ThemeMode => {
   if (typeof window === 'undefined') return 'light'
   const stored = window.localStorage.getItem(STORAGE_KEY) as ThemeMode | null
   if (stored) return stored
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light'
+  return 'light'
 }
 
 export type ThemeStore = {

@@ -18,6 +18,7 @@ export const useRecommendedTicketsQuery = () => {
       const { data } = await apiClient.get<RecommendedTicket[]>(recommendedUrl)
       return data
     },
+    initialData: [],
   })
 
   // Initialize stock state เมื่อโหลด recommended tickets สำเร็จ (เฉพาะเมื่อใช้ mock API)

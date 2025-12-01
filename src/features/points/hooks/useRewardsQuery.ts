@@ -12,5 +12,6 @@ export const useRewardsQuery = () =>
       const { data } = await apiClient.get<RewardItem[]>(rewardsUrl)
       return data
     },
+    initialData: [],
   })
 
