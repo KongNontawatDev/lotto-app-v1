@@ -88,20 +88,6 @@ const DREAM_DICTIONARY: DreamDictionaryItem[] = [
   },
 ]
 
-const _DREAM_CATEGORIES = [
-  'เงินทอง',
-  'คนตาย',
-  'สัตว์',
-  'น้ำ',
-  'งู',
-  'เด็ก',
-  'เจอพระ',
-  'ดอกไม้',
-  'ไฟ',
-  'ต้นไม้',
-  'อื่นๆ',
-]
-
 function predictNumbersFromDream(dreamText: string): { numbers: { twoDigits: string[], threeDigits: string[] }, prediction: string } {
   const text = dreamText.toLowerCase()
   const foundKeywords: string[] = []
@@ -180,16 +166,6 @@ function predictNumbersFromDream(dreamText: string): { numbers: { twoDigits: str
   return { numbers: { twoDigits, threeDigits }, prediction }
 }
 
-const _pageVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
-    },
-  },
-}
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -526,30 +502,6 @@ export function DreamToNumbersPage() {
 
   const handleReset = () => {
     setCurrentResult(null)
-  }
-
-  const _moonVariants = {
-    animate: {
-      y: [0, -10, 0],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: 'easeInOut' as const,
-      },
-    },
-  }
-
-  const _starVariants = {
-    animate: {
-      rotate: [0, 360],
-      scale: [1, 1.2, 1],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut' as const,
-      },
-    },
   }
 
   return (
