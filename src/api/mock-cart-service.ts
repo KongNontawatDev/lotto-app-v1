@@ -84,7 +84,7 @@ export const mockReleaseStock = async (
  * Mock API: อัพเดทจำนวนในตะกร้า
  */
 export const mockUpdateCartItem = async (
-  request: UpdateCartRequest,
+  _request: UpdateCartRequest,
 ): Promise<UpdateCartResponse> => {
   // จำลอง network delay
   await new Promise((resolve) => setTimeout(resolve, 300))

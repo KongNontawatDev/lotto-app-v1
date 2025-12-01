@@ -1,7 +1,7 @@
 import { createStore } from 'zustand/vanilla'
 import { toast } from 'sonner'
 
-import { releaseStock, reserveStock, updateCartItem } from '@/api/cart'
+import { releaseStock, reserveStock } from '@/api/cart'
 import type { CartItem, LotteryTicket } from '@/types'
 
 export const RESERVATION_DURATION_MS = 10 * 60 * 1000

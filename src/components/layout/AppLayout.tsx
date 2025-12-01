@@ -2,9 +2,9 @@ import { Outlet } from '@tanstack/react-router'
 
 import { Toaster } from '@/components/ui/sonner'
 
-import { BottomNavbar } from './BottomNavbar'
-import { Footer } from './Footer'
-import { TopNavbar } from './TopNavbar'
+// import { BottomNavbar } from './BottomNavbar'
+// import { Footer } from './Footer'
+// import { TopNavbar } from './TopNavbar'
 
 export const AppLayout = () => (
   <div className="min-h-screen bg-background text-foreground flex flex-col">

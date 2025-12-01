@@ -379,7 +379,7 @@ export function TreeScratchPage() {
     }
   }
 
-  const pageVariants = {
+  const _pageVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
