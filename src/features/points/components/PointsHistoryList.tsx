@@ -15,7 +15,8 @@ export const PointsHistoryList = ({
     return <PointsHistoryListSkeleton count={5} />
   }
 
-  if (!items.length) {
+  const safeItems = Array.isArray(items) ? items : []
+  if (!safeItems.length) {
     return <EmptyPointsHistory />
   }
 
@@ -23,7 +24,7 @@ export const PointsHistoryList = ({
     <section className="space-y-3 rounded-3xl border border-border/40 bg-card p-4 shadow-sm">
       <h3 className="text-lg font-semibold">ประวัติการได้รับแต้ม</h3>
       <ul className="space-y-2 text-sm">
-        {items.map((item) => (
+        {safeItems.map((item) => (
           <li
             key={item.id}
             className="flex items-center justify-between rounded-2xl border border-border/40 px-3 py-2"

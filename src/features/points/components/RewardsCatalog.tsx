@@ -16,7 +16,8 @@ export const RewardsCatalog = ({
     return <RewardsCatalogSkeleton count={4} />
   }
 
-  if (!items.length) {
+  const safeItems = Array.isArray(items) ? items : []
+  if (!safeItems.length) {
     return <EmptyRewards />
   }
 
@@ -24,7 +25,7 @@ export const RewardsCatalog = ({
     <section className="space-y-4 rounded-3xl border border-border/40 bg-card p-4 shadow-sm">
       <h3 className="text-lg font-semibold">ของรางวัลที่แลกได้</h3>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {items.map((item) => (
+        {safeItems.map((item) => (
           <article
             key={item.id}
             className="flex flex-col gap-4 rounded-2xl border border-border/40 p-3"

@@ -68,13 +68,14 @@ export const CartList = ({
     return <CartListSkeleton count={3} />
   }
 
-  if (!items.length) {
+  const safeItems = Array.isArray(items) ? items : []
+  if (!safeItems.length) {
     return <EmptyCart />
   }
 
   return (
     <ul className="space-y-4">
-      {items.map((item) => (
+      {safeItems.map((item) => (
         <li
           key={item.cartId}
           className="flex flex-col gap-4 rounded-3xl border border-border/40 bg-card p-4 shadow-sm sm:flex-row sm:items-center"

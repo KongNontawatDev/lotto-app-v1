@@ -18,10 +18,11 @@ const statusColors: Record<MyTicket['status'], string> = {
 }
 
 export const MyTicketsTabs = ({ tickets, isLoading }: MyTicketsTabsProps) => {
-  const currentTickets = tickets.filter(
+  const safeTickets = Array.isArray(tickets) ? tickets : []
+  const currentTickets = safeTickets.filter(
     (ticket) => new Date(ticket.drawDate) >= new Date(),
   )
-  const pastTickets = tickets.filter(
+  const pastTickets = safeTickets.filter(
     (ticket) => new Date(ticket.drawDate) < new Date(),
   )
 

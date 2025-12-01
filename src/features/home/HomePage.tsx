@@ -24,7 +24,7 @@ export const HomePage = () => {
   const [searchNumber, setSearchNumber] = useState('')
 
   const visibleTickets = useMemo(() => {
-    if (!recommended) return []
+    if (!recommended || !Array.isArray(recommended)) return []
     const filtered = recommended.filter((ticket) => {
       const matchFilter = filter === 'all' || ticket.type === filter
       const matchNumber = searchNumber

@@ -23,6 +23,7 @@ export const LotteryList = () => {
 
   // Filter tickets based on search term and filter type
   const filteredTickets = useMemo(() => {
+    if (!Array.isArray(tickets)) return []
     return tickets.filter((ticket) => {
       // Filter by type
       const matchFilter = filterType === 'all' || ticket.type === filterType

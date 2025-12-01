@@ -16,6 +16,7 @@ export const BannerCarousel = ({
   banners = [],
   isLoading,
 }: BannerCarouselProps) => {
+  const safeBanners = Array.isArray(banners) ? banners : []
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(0)
 
@@ -28,26 +29,26 @@ export const BannerCarousel = ({
   )
 
   const nextSlide = useCallback(() => {
-    if (!banners.length) return
+    if (!safeBanners.length) return
     setDirection(1)
-    setIndex((prev) => (prev + 1) % banners.length)
-  }, [banners.length])
+    setIndex((prev) => (prev + 1) % safeBanners.length)
+  }, [safeBanners.length])
 
   useEffect(() => {
-    if (!banners.length) return
+    if (!safeBanners.length) return
     const timer = window.setInterval(nextSlide, AUTO_PLAY_MS)
     return () => window.clearInterval(timer)
-  }, [banners.length, nextSlide])
+  }, [safeBanners.length, nextSlide])
 
   if (isLoading) {
     return <BannerSkeleton />
   }
 
-  if (!banners.length) {
+  if (!safeBanners.length) {
     return null
   }
 
-  const current = banners[index]
+  const current = safeBanners[index]
   if (!current) return null
 
   const variants = {
@@ -93,7 +94,7 @@ export const BannerCarousel = ({
 
       {/* Dots indicator */}
       <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
-        {banners.map((banner, dotIndex) => (
+        {safeBanners.map((banner, dotIndex) => (
           <button
             key={banner.id}
             type="button"

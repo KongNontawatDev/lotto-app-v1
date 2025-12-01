@@ -7,7 +7,8 @@ import { MyTicketsTabs } from './components/MyTicketsTabs'
 import { useMyTicketsQuery } from './hooks/useMyTicketsQuery'
 
 export const SafePage = () => {
-  const { data: tickets = [], isLoading } = useMyTicketsQuery()
+  const { data: tickets, isLoading } = useMyTicketsQuery()
+  const safeTickets = Array.isArray(tickets) ? tickets : []
 
   return (
     <PageTransition>
@@ -22,7 +23,7 @@ export const SafePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <MyTicketsTabs tickets={tickets} isLoading={isLoading} />
+            <MyTicketsTabs tickets={safeTickets} isLoading={isLoading} />
           </motion.div>
         </div>
       </div>

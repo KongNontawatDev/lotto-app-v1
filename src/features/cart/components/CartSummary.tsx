@@ -7,8 +7,9 @@ interface CartSummaryProps {
 }
 
 export const CartSummary = ({ items }: CartSummaryProps) => {
-  const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0)
-  const totalPrice = items.reduce(
+  const safeItems = Array.isArray(items) ? items : []
+  const totalQuantity = safeItems.reduce((sum, item) => sum + item.quantity, 0)
+  const totalPrice = safeItems.reduce(
     (sum, item) => sum + item.quantity * item.price,
     0,
   )
@@ -25,7 +26,7 @@ export const CartSummary = ({ items }: CartSummaryProps) => {
           <span className="text-primary">{formatCurrency(totalPrice)}</span>
         </div>
       </div>
-      <Button className="mt-4 w-full rounded-full" disabled={!items.length}>
+      <Button className="mt-4 w-full rounded-full" disabled={!safeItems.length}>
         ไปเลือกช่องทางชำระเงิน
       </Button>
     </div>
