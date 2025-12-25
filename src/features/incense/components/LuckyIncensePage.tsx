@@ -1344,7 +1344,7 @@ export function LuckyIncensePage() {
 
 									{/* ภาพกระถางธูปอยู่ใต้ธูป */}
 									<motion.div
-										className="absolute -bottom-[70px] left-1/2 transform -translate-x-1/2"
+										className="absolute -bottom-[168px] left-1/2 transform -translate-x-1/2"
 										style={{ zIndex: 8 }}
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
@@ -1353,7 +1353,7 @@ export function LuckyIncensePage() {
 										<img
 											src="/image/Incense-burner.png"
 											alt="กระถางธูป"
-											className="w-[333px] h-auto object-contain drop-shadow-lg"
+											className="w-[350px] max-w-none h-auto object-contain drop-shadow-lg"
 										/>
 									</motion.div>
 								</div>
